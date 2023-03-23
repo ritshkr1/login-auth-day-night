@@ -1,1 +1,21 @@
-<p>home works!</p>
+<h1>Matches</h1>
+
+<ul class="list-group">
+  <li *ngFor="let match of matchesdata" class="list-group-item">
+    <strong>{{ match.matchType }}</strong>
+    <ul class="list-group">
+      <li *ngFor="let match of match.seriesMatches" class="list-group-item">
+        <i>{{ match.seriesAdWrapper?.seriesName }}</i>
+        <ul class="list-group">
+          <li
+            *ngFor="let match of match.seriesAdWrapper?.matches"
+            class="list-group-item"
+          >
+            <i>{{ match.matchInfo.matchDesc }}</i> &nbsp;
+            <i>{{ match.matchInfo.status }}</i>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>

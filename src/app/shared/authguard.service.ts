@@ -7,6 +7,6 @@ export class AuthguardService {
   constructor() {}
 
   isLoggedIn() {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('loginData');
   }
 }
